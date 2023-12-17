@@ -1,0 +1,94 @@
+/* DEFINE COLOR PALATES */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+:root {
+    --background: #F1FAEE;
+    --border: #457B9D;
+    --text: #1D3557;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--background);
+    color: var(--text);
+    font-family: 'Playfair Display', serif;
+}
+h1 {
+    font-weight: 500;
+    font-size: 30px;
+}
+h2 {
+    font-weight: 500;
+    font-size: 30px;
+}
+header {
+    border-bottom: 1px solid var(--border);
+    padding: 10px 0px;
+}
+.container {
+    max-width: 1280px;
+    margin: auto;
+}
+.list {
+    list-style: none;
+    border: 1px solid var(--border);
+    margin: 10px 0;
+}
+.list-row-character {
+    display: grid;
+    grid-template-columns: 2em 10fr 5fr 10fr 10fr 10fr 10fr 10fr;
+}
+.list-row-location {
+    display: grid;
+    grid-template-columns: 2em 8fr 4fr 5fr 10fr 10fr;
+}
+.list-row-episode {
+    display: grid;
+    grid-template-columns: 2em 10fr 8fr 5fr 10fr;
+}
+.list-item-header {
+    font-weight: bold;
+    text-align: center;
+}
+.list-item-cell {
+    padding: 4px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+/* blue box container for vertical stack */
+.list-item-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--column-width-min), 1fr));
+}
+/* border */
+.list-row div:not(:last-child) {
+    border-right: 1px solid var(--border);
+}
+.list li:not(:last-child) {
+    border-bottom: 1px solid var(--border);
+}
+.pagination {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.pagination ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.pagination .total {
+    padding: 5px;
+}
+.pagination-items li {
+    border-bottom: 0px!important;
+    border-left: 1px solid var(--border);
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.pagination-item:hover {
+    background-color: var(--border);
+    color: var(--background);
+}
